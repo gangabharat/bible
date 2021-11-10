@@ -2443,64 +2443,105 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       7716);
+      /* harmony import */
+
+
+      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ngx-bootstrap/modal */
+      3301);
 
       var _BibleVerseDetailComponent = /*#__PURE__*/function () {
-        function _BibleVerseDetailComponent() {
+        function _BibleVerseDetailComponent(bsModalService) {
           _classCallCheck(this, _BibleVerseDetailComponent);
+
+          this.bsModalService = bsModalService;
         }
 
         _createClass(_BibleVerseDetailComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {}
+        }, {
+          key: "onClose",
+          value: function onClose() {
+            this.bsModalService._hideModal(1);
+          }
         }]);
 
         return _BibleVerseDetailComponent;
       }();
 
       _BibleVerseDetailComponent.ɵfac = function BibleVerseDetailComponent_Factory(t) {
-        return new (t || _BibleVerseDetailComponent)();
+        return new (t || _BibleVerseDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__.BsModalService));
       };
 
-      _BibleVerseDetailComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      _BibleVerseDetailComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: _BibleVerseDetailComponent,
         selectors: [["app-bible-verse-detail"]],
-        decls: 6,
-        vars: 4,
-        consts: [[1, "card-body"], [1, "card-text"], [1, "card-title"]],
+        decls: 12,
+        vars: 7,
+        consts: [[1, "modal-header", "clearfix"], [1, "modal-title", "float-left"], ["type", "button", "aria-label", "Close", 1, "close", "float-right", 3, "click"], ["aria-hidden", "true"], [1, "card-body"], [1, "card-text"], [1, "card-title"]],
         template: function BibleVerseDetailComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h4", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "button", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function BibleVerseDetailComponent_Template_button_click_3_listener() {
+              return ctx.onClose();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h1", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "span", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "\xD7");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "h2");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "h1", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.verse.Verse);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate3"]("", ctx.book, " ", ctx.chapter, " : ", ctx.verseNumber, "");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate3"]("", ctx.book, " ", ctx.chapter, " : ", ctx.verseNumber, "");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx.verse.Verse);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate3"]("", ctx.book, " ", ctx.chapter, " : ", ctx.verseNumber, "");
           }
         },
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiaWJsZS12ZXJzZS1kZXRhaWwuY29tcG9uZW50LmNzcyJ9 */"]
@@ -2542,7 +2583,7 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/core */
       7716);
       /* harmony import */
@@ -2554,166 +2595,196 @@
       /* harmony import */
 
 
-      var _service_bible_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _service_bible_book_index_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../service/bible-book-index.service */
+      4494);
+      /* harmony import */
+
+
+      var _service_bible_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../service/bible-store.service */
       8612);
       /* harmony import */
 
 
-      var _service_notification_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _service_notification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../service/notification.service */
       7320);
       /* harmony import */
 
 
-      var _shared_push_notification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _shared_push_notification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../shared/push-notification.service */
       7407);
       /* harmony import */
 
 
-      var _shared_audio_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _shared_audio_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ../shared/audio.service */
       8784);
       /* harmony import */
 
 
-      var _shared_cache_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _shared_cache_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ../shared/cache.service */
       133);
       /* harmony import */
 
 
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ngx-bootstrap/modal */
       3301);
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/forms */
       3679);
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/common */
       8583);
 
-      function BibleComponent_option_9_Template(rf, ctx) {
+      function BibleComponent_option_11_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "option", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "option", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var book_r4 = ctx.$implicit;
-          var i_r5 = ctx.index;
+          var bookIndex_r5 = ctx.$implicit;
+          var i_r6 = ctx.index;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpropertyInterpolate"]("value", i_r5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpropertyInterpolate"]("value", i_r6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtextInterpolate1"](" ", book_r4, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate2"](" ", bookIndex_r5.book, " (", bookIndex_r5.chapters.length, ") ");
         }
       }
 
-      function BibleComponent_option_20_Template(rf, ctx) {
+      function BibleComponent_option_18_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "option", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "option", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var languages_r6 = ctx.$implicit;
+          var bibleChapter_r7 = ctx.$implicit;
 
-          var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpropertyInterpolate"]("value", bibleChapter_r7.chapter);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("value", languages_r6)("selected", ctx_r2.selectedbibleLanguage);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtextInterpolate1"](" ", languages_r6, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate2"](" ", bibleChapter_r7.chapter, " (", bibleChapter_r7.verses, ") ");
         }
       }
 
-      function BibleComponent_div_21_button_1_Template(rf, ctx) {
+      function BibleComponent_option_25_Template(rf, ctx) {
         if (rf & 1) {
-          var _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "option", 13);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "button", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵlistener"]("click", function BibleComponent_div_21_button_1_Template_button_click_0_listener() {
-            var restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵrestoreView"](_r12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
+        }
 
-            var i_r10 = restoredCtx.index;
-            var verse_r9 = restoredCtx.$implicit;
+        if (rf & 2) {
+          var languages_r9 = ctx.$implicit;
 
-            var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵnextContext"](2);
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"]();
 
-            return ctx_r11.onVerse(ctx_r11.books[ctx_r11.book], ctx_r11.chapter, i_r10 + 1, verse_r9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("value", languages_r9)("selected", ctx_r3.selectedbibleLanguage);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"](" ", languages_r9, " ");
+        }
+      }
+
+      function BibleComponent_div_26_button_1_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "button", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("click", function BibleComponent_div_26_button_1_Template_button_click_0_listener() {
+            var restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r15);
+
+            var i_r13 = restoredCtx.index;
+            var verse_r12 = restoredCtx.$implicit;
+
+            var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"](2);
+
+            return ctx_r14.onVerse(ctx_r14.books[ctx_r14.book], ctx_r14.chapter, i_r13 + 1, verse_r12);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](1, "b");
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "b");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var verse_r9 = ctx.$implicit;
-          var i_r10 = ctx.index;
+          var verse_r12 = ctx.$implicit;
+          var i_r13 = ctx.index;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtextInterpolate1"]("", i_r10 + 1, " : ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"]("", i_r13 + 1, " : ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtextInterpolate1"]("", verse_r9.Verse, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"]("", verse_r12.Verse, " ");
         }
       }
 
-      function BibleComponent_div_21_Template(rf, ctx) {
+      function BibleComponent_div_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtemplate"](1, BibleComponent_div_21_button_1_Template, 4, 2, "button", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](1, BibleComponent_div_26_button_1_Template, 4, 2, "button", 14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵnextContext"]();
+          var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngForOf", ctx_r3.bibleChapter.Verse);
+          _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngForOf", ctx_r4.bibleChapter.Verse);
         }
       }
 
       var _BibleComponent = /*#__PURE__*/function () {
-        function _BibleComponent(bibleService, bibleStoreService, notificationService, pushNotificationsService, audioService, cacheService, bsModalService) {
+        function _BibleComponent(bibleService, bibleBookIndexService, bibleStoreService, notificationService, pushNotificationsService, audioService, cacheService, bsModalService) {
           _classCallCheck(this, _BibleComponent);
 
           this.bibleService = bibleService;
+          this.bibleBookIndexService = bibleBookIndexService;
           this.bibleStoreService = bibleStoreService;
           this.notificationService = notificationService;
           this.pushNotificationsService = pushNotificationsService;
           this.audioService = audioService;
           this.cacheService = cacheService;
           this.bsModalService = bsModalService;
+          this.bibleBookIndex = [];
+          this.bibleChapters = [];
+          this.bibleChaptersCount = 0;
           this.book = 0;
           this.chapter = 0;
           this.verses = 0;
@@ -2754,30 +2825,84 @@
             this.book = +this.selectedbibleBook;
             this.chapter = +this.selectedbibleChapter;
             this.getSelectLanguageBible();
+            this.loadBibleIndex();
+          }
+        }, {
+          key: "loadBibleIndex",
+          value: function loadBibleIndex() {
+            var _this7 = this;
+
+            this.bibleBookIndexService.getBibleBookIndex().subscribe(function (bibleBookIndexRes) {
+              _this7.bibleBookIndex = bibleBookIndexRes;
+
+              _this7.loadBibleChapterIndex();
+            });
+          }
+        }, {
+          key: "loadBibleChapterIndex",
+          value: function loadBibleChapterIndex() {
+            var _this8 = this;
+
+            this.selectedBibleBookIndex = this.bibleBookIndex.find(function (x, index) {
+              return index == _this8.book;
+            });
           }
         }, {
           key: "getSelectLanguageBible",
           value: function getSelectLanguageBible() {
-            var _this7 = this;
+            var _this9 = this;
 
             var selectedBible = this.cacheService.load("selectedBible");
             this.bibleService.BibleLanguage = selectedBible.Language;
             this.bibleService.getBible().subscribe(function (res) {
-              _this7.bibleData = res;
+              _this9.bibleData = res;
 
-              _this7.getSelectedBible();
+              _this9.loadSelectedBible();
             });
           }
         }, {
-          key: "getSelectedBible",
-          value: function getSelectedBible() {
+          key: "loadSelectedBible",
+          value: function loadSelectedBible() {
             var _a;
 
             this.bibleChapter = (_a = this.bibleData.Book[this.book]) === null || _a === void 0 ? void 0 : _a.Chapter[this.chapter - 1];
+            this.bibleChapters = this.bibleData.Book[this.book].Chapter;
+            this.getBibleChaptersCount();
           }
         }, {
-          key: "onbibleLanguagesChangeEvent",
-          value: function onbibleLanguagesChangeEvent(form) {
+          key: "getBibleChaptersCount",
+          value: function getBibleChaptersCount() {
+            return this.bibleData.Book[this.book].Chapter.length;
+          }
+        }, {
+          key: "onBookChangeEvent",
+          value: function onBookChangeEvent(form) {
+            this.book = +form.value.Book;
+            form.control.patchValue({
+              Chapter: 1
+            });
+            this.chapter = +form.value.Chapter;
+            this.cacheService.save({
+              key: "selectedBible",
+              data: form.value
+            });
+            this.loadSelectedBible();
+            this.loadBibleChapterIndex();
+          }
+        }, {
+          key: "onChapterChangeEvent",
+          value: function onChapterChangeEvent(form) {
+            this.cacheService.save({
+              key: "selectedBible",
+              data: form.value
+            });
+            this.book = +form.value.Book;
+            this.chapter = +form.value.Chapter;
+            this.loadSelectedBible();
+          }
+        }, {
+          key: "onLanguageChangeEvent",
+          value: function onLanguageChangeEvent(form) {
             this.cacheService.save({
               key: "selectedBible",
               data: form.value
@@ -2785,17 +2910,6 @@
             this.book = +form.value.Book;
             this.chapter = +form.value.Chapter;
             this.getSelectLanguageBible();
-          }
-        }, {
-          key: "onChangeEvent",
-          value: function onChangeEvent(form) {
-            this.cacheService.save({
-              key: "selectedBible",
-              data: form.value
-            });
-            this.book = +form.value.Book;
-            this.chapter = +form.value.Chapter;
-            this.getSelectedBible();
           }
         }, {
           key: "onVerse",
@@ -2817,141 +2931,171 @@
       }();
 
       _BibleComponent.ɵfac = function BibleComponent_Factory(t) {
-        return new (t || _BibleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](_service_bible_service__WEBPACK_IMPORTED_MODULE_1__.BibleService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](_service_bible_store_service__WEBPACK_IMPORTED_MODULE_2__.BibleStoreService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](_service_notification_service__WEBPACK_IMPORTED_MODULE_3__.NotificationService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](_shared_push_notification_service__WEBPACK_IMPORTED_MODULE_4__.PushNotificationsService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](_shared_audio_service__WEBPACK_IMPORTED_MODULE_5__.AudioService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](_shared_cache_service__WEBPACK_IMPORTED_MODULE_6__.CacheService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__.BsModalService));
+        return new (t || _BibleComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_service_bible_service__WEBPACK_IMPORTED_MODULE_1__.BibleService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_service_bible_book_index_service__WEBPACK_IMPORTED_MODULE_2__.BibleBookIndexService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_service_bible_store_service__WEBPACK_IMPORTED_MODULE_3__.BibleStoreService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_service_notification_service__WEBPACK_IMPORTED_MODULE_4__.NotificationService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_shared_push_notification_service__WEBPACK_IMPORTED_MODULE_5__.PushNotificationsService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_shared_audio_service__WEBPACK_IMPORTED_MODULE_6__.AudioService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_shared_cache_service__WEBPACK_IMPORTED_MODULE_7__.CacheService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_8__.BsModalService));
       };
 
-      _BibleComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineComponent"]({
+      _BibleComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({
         type: _BibleComponent,
         selectors: [["app-bible"]],
-        decls: 22,
-        vars: 6,
-        consts: [[1, "list-group", "mb-5"], [1, "list-group-item", "list-group-item-action", "active", "sticky-top"], ["form", "ngForm"], [1, "row"], [1, "col"], ["name", "Book", 1, "form-control", 3, "ngModel", "change"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "number", "placeholder", "Chapter", "name", "Chapter", "min", "1", "max", "150", 1, "form-control", 3, "ngModel", "change"], ["name", "Language", 1, "form-control", "text-capitalize", 3, "ngModel", "change"], ["value", "-1"], [3, "value", "selected", 4, "ngFor", "ngForOf"], [4, "ngIf"], [3, "value"], [3, "value", "selected"], ["type", "button", "class", "list-group-item list-group-item-action card-shadow", 3, "click", 4, "ngFor", "ngForOf"], ["type", "button", 1, "list-group-item", "list-group-item-action", "card-shadow", 3, "click"]],
+        decls: 27,
+        vars: 10,
+        consts: [[1, "list-group", "mb-5"], [1, "list-group-item", "list-group-item-action", "active", "sticky-top"], ["form", "ngForm"], [1, "row"], [1, "col"], [1, "position-absolute", "top-0", "start-100", "translate-middle", "badge", "rounded-pill", "bg-danger"], ["name", "Book", 1, "form-control", 3, "ngModel", "change"], [3, "value", 4, "ngFor", "ngForOf"], ["name", "Chapter", 1, "form-control", 3, "ngModel", "change"], ["name", "Language", 1, "form-control", "text-capitalize", 3, "ngModel", "change"], [3, "value", "selected", 4, "ngFor", "ngForOf"], [4, "ngIf"], [3, "value"], [3, "value", "selected"], ["type", "button", "class", "list-group-item list-group-item-action card-shadow", 3, "click", 4, "ngFor", "ngForOf"], ["type", "button", 1, "list-group-item", "list-group-item-action", "card-shadow", 3, "click"]],
         template: function BibleComponent_Template(rf, ctx) {
           if (rf & 1) {
-            var _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵgetCurrentView"]();
+            var _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵgetCurrentView"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "div", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](2, "form", null, 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](2, "form", null, 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](4, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](4, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](5, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](5, "div", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](6, "label");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "label");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](7, "Book");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](7, "Book ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](8, "span", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](8, "select", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵlistener"]("change", function BibleComponent_Template_select_change_8_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵrestoreView"](_r13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-              var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵreference"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-              return ctx.onChangeEvent(_r0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](10, "select", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("change", function BibleComponent_Template_select_change_10_listener() {
+              _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r16);
+
+              var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵreference"](3);
+
+              return ctx.onBookChangeEvent(_r0);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtemplate"](9, BibleComponent_option_9_Template, 2, 2, "option", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](11, BibleComponent_option_11_Template, 2, 3, "option", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](10, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](12, "div", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](11, "label");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](13, "label");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](12, "Chapter");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](14, "Chapter ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](15, "span", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](13, "input", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵlistener"]("change", function BibleComponent_Template_input_change_13_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵrestoreView"](_r13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-              var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵreference"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-              return ctx.onChangeEvent(_r0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](17, "select", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("change", function BibleComponent_Template_select_change_17_listener() {
+              _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r16);
+
+              var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵreference"](3);
+
+              return ctx.onChapterChangeEvent(_r0);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](18, BibleComponent_option_18_Template, 2, 3, "option", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](14, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](15, "label");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](19, "div", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](16, "Language");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](20, "label");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](21, "Language ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](17, "select", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](22, "span", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵlistener"]("change", function BibleComponent_Template_select_change_17_listener() {
-              _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵrestoreView"](_r13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](23);
 
-              var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵreference"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-              return ctx.onbibleLanguagesChangeEvent(_r0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](24, "select", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("change", function BibleComponent_Template_select_change_24_listener() {
+              _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵrestoreView"](_r16);
+
+              var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵreference"](3);
+
+              return ctx.onLanguageChangeEvent(_r0);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](18, "option", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](25, BibleComponent_option_25_Template, 2, 3, "option", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtext"](19, "--select--");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtemplate"](20, BibleComponent_option_20_Template, 2, 3, "option", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](26, BibleComponent_div_26_Template, 2, 1, "div", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵtemplate"](21, BibleComponent_div_21_Template, 2, 1, "div", 11);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngModel", ctx.selectedbibleBook);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"](" ", 66, " ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngForOf", ctx.books);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngModel", ctx.selectedbibleBook);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngModel", ctx.selectedbibleChapter);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngForOf", ctx.bibleBookIndex);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngModel", ctx.selectedbibleLanguage);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"](" ", ctx.selectedBibleBookIndex.chapters.length, " ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngForOf", ctx.bibleLanguages);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngModel", ctx.selectedbibleChapter);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngIf", ctx.bibleChapter);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngForOf", ctx.selectedBibleBookIndex.chapters);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtextInterpolate1"](" ", ctx.bibleLanguages.length, " ");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngModel", ctx.selectedbibleLanguage);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngForOf", ctx.bibleLanguages);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngIf", ctx.bibleChapter);
           }
         },
-        directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NgForm, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.SelectControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NgModel, _angular_common__WEBPACK_IMPORTED_MODULE_10__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.MinValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.MaxValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NumberValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_9__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ɵNgSelectMultipleOption"], _angular_common__WEBPACK_IMPORTED_MODULE_10__.NgIf],
+        directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgForm, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.SelectControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgModel, _angular_common__WEBPACK_IMPORTED_MODULE_11__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_11__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_10__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ɵNgSelectMultipleOption"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiaWJsZS5jb21wb25lbnQuY3NzIn0= */"]
       });
       /***/
@@ -3229,13 +3373,13 @@
       }
 
       var _FetchDataComponent = function _FetchDataComponent(client) {
-        var _this8 = this;
+        var _this10 = this;
 
         _classCallCheck(this, _FetchDataComponent);
 
         this.client = client;
         client.get().subscribe(function (result) {
-          _this8.forecasts = result;
+          _this10.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -3936,6 +4080,77 @@
     },
 
     /***/
+    4494:
+    /*!*****************************************************!*\
+      !*** ./src/app/service/bible-book-index.service.ts ***!
+      \*****************************************************/
+
+    /***/
+    function _(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export */
+
+
+      __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */
+        "BibleBookIndexService": function BibleBookIndexService() {
+          return (
+            /* binding */
+            _BibleBookIndexService
+          );
+        }
+        /* harmony export */
+
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      7716);
+      /* harmony import */
+
+
+      var _shared_http_client_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ../shared/http-client.service */
+      6057);
+
+      var _BibleBookIndexService = /*#__PURE__*/function () {
+        function _BibleBookIndexService(_http) {
+          _classCallCheck(this, _BibleBookIndexService);
+
+          this._http = _http;
+          this._bibleLanguagePath = "assets/bible/bible-book-info.json";
+        }
+
+        _createClass(_BibleBookIndexService, [{
+          key: "getBibleBookIndex",
+          value: function getBibleBookIndex() {
+            return this._http.get({
+              url: this._bibleLanguagePath,
+              cacheMins: 0
+            });
+          }
+        }]);
+
+        return _BibleBookIndexService;
+      }();
+
+      _BibleBookIndexService.ɵfac = function BibleBookIndexService_Factory(t) {
+        return new (t || _BibleBookIndexService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_shared_http_client_service__WEBPACK_IMPORTED_MODULE_0__.HttpClientService));
+      };
+
+      _BibleBookIndexService.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+        token: _BibleBookIndexService,
+        factory: _BibleBookIndexService.ɵfac,
+        providedIn: "root"
+      });
+      /***/
+    },
+
+    /***/
     8612:
     /*!************************************************!*\
       !*** ./src/app/service/bible-store.service.ts ***!
@@ -4309,7 +4524,7 @@
 
       var _AudioService = /*#__PURE__*/function () {
         function _AudioService() {
-          var _this9 = this;
+          var _this11 = this;
 
           _classCallCheck(this, _AudioService);
 
@@ -4320,23 +4535,23 @@
           this.playerStatus = new rxjs__WEBPACK_IMPORTED_MODULE_0__.BehaviorSubject('paused');
 
           this.calculateTime = function (evt) {
-            var ct = _this9.audio.currentTime;
-            var d = _this9.audio.duration;
+            var ct = _this11.audio.currentTime;
+            var d = _this11.audio.duration;
 
-            _this9.setTimeElapsed(ct);
+            _this11.setTimeElapsed(ct);
 
-            _this9.setPercentElapsed(d, ct);
+            _this11.setPercentElapsed(d, ct);
 
-            _this9.setTimeRemaining(d, ct);
+            _this11.setTimeRemaining(d, ct);
           };
 
           this.calculatePercentLoaded = function (evt) {
-            if (_this9.audio.duration > 0) {
-              for (var i = 0; i < _this9.audio.buffered.length; i++) {
-                if (_this9.audio.buffered.start(_this9.audio.buffered.length - 1 - i) < _this9.audio.currentTime) {
-                  var percent = _this9.audio.buffered.end(_this9.audio.buffered.length - 1 - i) / _this9.audio.duration * 100;
+            if (_this11.audio.duration > 0) {
+              for (var i = 0; i < _this11.audio.buffered.length; i++) {
+                if (_this11.audio.buffered.start(_this11.audio.buffered.length - 1 - i) < _this11.audio.currentTime) {
+                  var percent = _this11.audio.buffered.end(_this11.audio.buffered.length - 1 - i) / _this11.audio.duration * 100;
 
-                  _this9.setPercentLoaded(percent);
+                  _this11.setPercentLoaded(percent);
 
                   break;
                 }
@@ -4347,27 +4562,27 @@
           this.setPlayerStatus = function (evt) {
             switch (evt.type) {
               case 'playing':
-                _this9.playerStatus.next('playing');
+                _this11.playerStatus.next('playing');
 
                 break;
 
               case 'pause':
-                _this9.playerStatus.next('paused');
+                _this11.playerStatus.next('paused');
 
                 break;
 
               case 'waiting':
-                _this9.playerStatus.next('loading');
+                _this11.playerStatus.next('loading');
 
                 break;
 
               case 'ended':
-                _this9.playerStatus.next('ended');
+                _this11.playerStatus.next('ended');
 
                 break;
 
               default:
-                _this9.playerStatus.next('paused');
+                _this11.playerStatus.next('paused');
 
                 break;
             }
@@ -4998,7 +5213,7 @@
         }, {
           key: "httpCall",
           value: function httpCall(verb, options) {
-            var _this10 = this;
+            var _this12 = this;
 
             // Setup default values
             options.body = options.body || null;
@@ -5019,7 +5234,7 @@
             }).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.switchMap)(function (response) {
               if (options.cacheMins > 0) {
                 // Data will be cached
-                _this10._cacheService.save({
+                _this12._cacheService.save({
                   key: options.url,
                   data: response,
                   expirationMins: options.cacheMins
@@ -5132,7 +5347,7 @@
         _createClass(_HttpRequestInterceptor, [{
           key: "intercept",
           value: function intercept(req, next) {
-            var _this11 = this;
+            var _this13 = this;
 
             this.httpRequestHandler.setLoaderStatus(true);
             console.log(req); //Modify request before sent 
@@ -5143,7 +5358,7 @@
               if (event.type === _angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpEventType.Response) {
                 console.log(event);
 
-                _this11.httpRequestHandler.setLoaderStatus(false);
+                _this13.httpRequestHandler.setLoaderStatus(false);
               }
             }, function () {}), //Catch Errors from the URL
             (0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (err) {
@@ -6840,7 +7055,7 @@
 
       var _TodoComponent = /*#__PURE__*/function () {
         function _TodoComponent(listsClient, itemsClient, modalService) {
-          var _this12 = this;
+          var _this14 = this;
 
           _classCallCheck(this, _TodoComponent);
 
@@ -6854,10 +7069,10 @@
           this.faPlus = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faPlus;
           this.faEllipsisH = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__.faEllipsisH;
           listsClient.get().subscribe(function (result) {
-            _this12.vm = result;
+            _this14.vm = result;
 
-            if (_this12.vm.lists.length) {
-              _this12.selectedList = _this12.vm.lists[0];
+            if (_this14.vm.lists.length) {
+              _this14.selectedList = _this14.vm.lists[0];
             }
           }, function (error) {
             return console.error(error);
@@ -6889,7 +7104,7 @@
         }, {
           key: "addList",
           value: function addList() {
-            var _this13 = this;
+            var _this15 = this;
 
             var list = _web_api_client__WEBPACK_IMPORTED_MODULE_0__.TodoListDto.fromJS({
               id: 0,
@@ -6902,18 +7117,18 @@
             }).subscribe(function (result) {
               list.id = result;
 
-              _this13.vm.lists.push(list);
+              _this15.vm.lists.push(list);
 
-              _this13.selectedList = list;
+              _this15.selectedList = list;
 
-              _this13.newListModalRef.hide();
+              _this15.newListModalRef.hide();
 
-              _this13.newListEditor = {};
+              _this15.newListEditor = {};
             }, function (error) {
               var errors = JSON.parse(error.response);
 
               if (errors && errors.Title) {
-                _this13.newListEditor.error = errors.Title[0];
+                _this15.newListEditor.error = errors.Title[0];
               }
 
               setTimeout(function () {
@@ -6933,11 +7148,11 @@
         }, {
           key: "updateListOptions",
           value: function updateListOptions() {
-            var _this14 = this;
+            var _this16 = this;
 
             this.listsClient.update(this.selectedList.id, _web_api_client__WEBPACK_IMPORTED_MODULE_0__.UpdateTodoListCommand.fromJS(this.listOptionsEditor)).subscribe(function () {
-              _this14.selectedList.title = _this14.listOptionsEditor.title, _this14.listOptionsModalRef.hide();
-              _this14.listOptionsEditor = {};
+              _this16.selectedList.title = _this16.listOptionsEditor.title, _this16.listOptionsModalRef.hide();
+              _this16.listOptionsEditor = {};
             }, function (error) {
               return console.error(error);
             });
@@ -6951,15 +7166,15 @@
         }, {
           key: "deleteListConfirmed",
           value: function deleteListConfirmed() {
-            var _this15 = this;
+            var _this17 = this;
 
             this.listsClient["delete"](this.selectedList.id).subscribe(function () {
-              _this15.deleteListModalRef.hide();
+              _this17.deleteListModalRef.hide();
 
-              _this15.vm.lists = _this15.vm.lists.filter(function (t) {
-                return t.id != _this15.selectedList.id;
+              _this17.vm.lists = _this17.vm.lists.filter(function (t) {
+                return t.id != _this17.selectedList.id;
               });
-              _this15.selectedList = _this15.vm.lists.length ? _this15.vm.lists[0] : null;
+              _this17.selectedList = _this17.vm.lists.length ? _this17.vm.lists[0] : null;
             }, function (error) {
               return console.error(error);
             });
@@ -6975,29 +7190,29 @@
         }, {
           key: "updateItemDetails",
           value: function updateItemDetails() {
-            var _this16 = this;
+            var _this18 = this;
 
             this.itemsClient.updateItemDetails(this.selectedItem.id, _web_api_client__WEBPACK_IMPORTED_MODULE_0__.UpdateTodoItemDetailCommand.fromJS(this.itemDetailsEditor)).subscribe(function () {
-              if (_this16.selectedItem.listId != _this16.itemDetailsEditor.listId) {
-                _this16.selectedList.items = _this16.selectedList.items.filter(function (i) {
-                  return i.id != _this16.selectedItem.id;
+              if (_this18.selectedItem.listId != _this18.itemDetailsEditor.listId) {
+                _this18.selectedList.items = _this18.selectedList.items.filter(function (i) {
+                  return i.id != _this18.selectedItem.id;
                 });
 
-                var listIndex = _this16.vm.lists.findIndex(function (l) {
-                  return l.id == _this16.itemDetailsEditor.listId;
+                var listIndex = _this18.vm.lists.findIndex(function (l) {
+                  return l.id == _this18.itemDetailsEditor.listId;
                 });
 
-                _this16.selectedItem.listId = _this16.itemDetailsEditor.listId;
+                _this18.selectedItem.listId = _this18.itemDetailsEditor.listId;
 
-                _this16.vm.lists[listIndex].items.push(_this16.selectedItem);
+                _this18.vm.lists[listIndex].items.push(_this18.selectedItem);
               }
 
-              _this16.selectedItem.priority = _this16.itemDetailsEditor.priority;
-              _this16.selectedItem.note = _this16.itemDetailsEditor.note;
+              _this18.selectedItem.priority = _this18.itemDetailsEditor.priority;
+              _this18.selectedItem.note = _this18.itemDetailsEditor.note;
 
-              _this16.itemDetailsModalRef.hide();
+              _this18.itemDetailsModalRef.hide();
 
-              _this16.itemDetailsEditor = {};
+              _this18.itemDetailsEditor = {};
             }, function (error) {
               return console.error(error);
             });
@@ -7062,7 +7277,7 @@
         }, {
           key: "deleteItem",
           value: function deleteItem(item) {
-            var _this17 = this;
+            var _this19 = this;
 
             if (this.itemDetailsModalRef) {
               this.itemDetailsModalRef.hide();
@@ -7073,7 +7288,7 @@
               this.selectedList.items.splice(itemIndex, 1);
             } else {
               this.itemsClient["delete"](item.id).subscribe(function () {
-                return _this17.selectedList.items = _this17.selectedList.items.filter(function (t) {
+                return _this19.selectedList.items = _this19.selectedList.items.filter(function (t) {
                   return t.id != item.id;
                 });
               }, function (error) {
@@ -7325,14 +7540,14 @@
         _createClass(_TokenComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this18 = this;
+            var _this20 = this;
 
             this.isCopied = false;
             this.authorizeService.getAccessToken().subscribe(function (t) {
-              _this18.token = "Bearer " + t;
-              _this18.isError = false;
+              _this20.token = "Bearer " + t;
+              _this20.isError = false;
             }, function (err) {
-              _this18.isError = true;
+              _this20.isError = true;
             });
           }
         }, {
@@ -7623,7 +7838,7 @@
         _createClass(_EmployeeClient, [{
           key: "getAll",
           value: function getAll() {
-            var _this19 = this;
+            var _this21 = this;
 
             var url_ = this.baseUrl + "/api/Employee";
             url_ = url_.replace(/[?&]$/, "");
@@ -7635,11 +7850,11 @@
               })
             };
             return this.http.request("get", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this19.processGetAll(response_);
+              return _this21.processGetAll(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this19.processGetAll(response_);
+                  return _this21.processGetAll(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -7649,7 +7864,7 @@
         }, {
           key: "processGetAll",
           value: function processGetAll(response) {
-            var _this20 = this;
+            var _this22 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -7674,7 +7889,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this20.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this22.jsonParseReviver);
 
                 if (Array.isArray(resultData200)) {
                   result200 = [];
@@ -7707,7 +7922,7 @@
         }, {
           key: "post",
           value: function post(value) {
-            var _this21 = this;
+            var _this23 = this;
 
             var url_ = this.baseUrl + "/api/Employee";
             url_ = url_.replace(/[?&]$/, "");
@@ -7721,11 +7936,11 @@
               })
             };
             return this.http.request("post", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this21.processPost(response_);
+              return _this23.processPost(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this21.processPost(response_);
+                  return _this23.processPost(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -7770,7 +7985,7 @@
         }, {
           key: "get",
           value: function get(id) {
-            var _this22 = this;
+            var _this24 = this;
 
             var url_ = this.baseUrl + "/api/Employee/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -7784,11 +7999,11 @@
               })
             };
             return this.http.request("get", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this22.processGet(response_);
+              return _this24.processGet(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this22.processGet(response_);
+                  return _this24.processGet(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -7798,7 +8013,7 @@
         }, {
           key: "processGet",
           value: function processGet(response) {
-            var _this23 = this;
+            var _this25 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -7823,7 +8038,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this23.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this25.jsonParseReviver);
                 result200 = resultData200 !== undefined ? resultData200 : null;
                 return (0, rxjs__WEBPACK_IMPORTED_MODULE_5__.of)(result200);
               }));
@@ -7838,7 +8053,7 @@
         }, {
           key: "put",
           value: function put(id, value) {
-            var _this24 = this;
+            var _this26 = this;
 
             var url_ = this.baseUrl + "/api/Employee/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -7854,11 +8069,11 @@
               })
             };
             return this.http.request("put", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this24.processPut(response_);
+              return _this26.processPut(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this24.processPut(response_);
+                  return _this26.processPut(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -7903,7 +8118,7 @@
         }, {
           key: "delete",
           value: function _delete(id) {
-            var _this25 = this;
+            var _this27 = this;
 
             var url_ = this.baseUrl + "/api/Employee/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -7915,11 +8130,11 @@
               headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpHeaders({})
             };
             return this.http.request("delete", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this25.processDelete(response_);
+              return _this27.processDelete(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this25.processDelete(response_);
+                  return _this27.processDelete(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -7988,7 +8203,7 @@
         _createClass(_TodoItemsClient, [{
           key: "getTodoItemsWithPagination",
           value: function getTodoItemsWithPagination(listId, pageNumber, pageSize) {
-            var _this26 = this;
+            var _this28 = this;
 
             var url_ = this.baseUrl + "/api/TodoItems?";
             if (listId === null) throw new Error("The parameter 'listId' cannot be null.");else if (listId !== undefined) url_ += "ListId=" + encodeURIComponent("" + listId) + "&";
@@ -8003,11 +8218,11 @@
               })
             };
             return this.http.request("get", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this26.processGetTodoItemsWithPagination(response_);
+              return _this28.processGetTodoItemsWithPagination(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this26.processGetTodoItemsWithPagination(response_);
+                  return _this28.processGetTodoItemsWithPagination(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8017,7 +8232,7 @@
         }, {
           key: "processGetTodoItemsWithPagination",
           value: function processGetTodoItemsWithPagination(response) {
-            var _this27 = this;
+            var _this29 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -8042,7 +8257,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this27.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this29.jsonParseReviver);
                 result200 = _PaginatedListOfTodoItemDto.fromJS(resultData200);
                 return (0, rxjs__WEBPACK_IMPORTED_MODULE_5__.of)(result200);
               }));
@@ -8057,7 +8272,7 @@
         }, {
           key: "create",
           value: function create(command) {
-            var _this28 = this;
+            var _this30 = this;
 
             var url_ = this.baseUrl + "/api/TodoItems";
             url_ = url_.replace(/[?&]$/, "");
@@ -8072,11 +8287,11 @@
               })
             };
             return this.http.request("post", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this28.processCreate(response_);
+              return _this30.processCreate(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this28.processCreate(response_);
+                  return _this30.processCreate(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8086,7 +8301,7 @@
         }, {
           key: "processCreate",
           value: function processCreate(response) {
-            var _this29 = this;
+            var _this31 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -8111,7 +8326,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this29.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this31.jsonParseReviver);
                 result200 = resultData200 !== undefined ? resultData200 : null;
                 return (0, rxjs__WEBPACK_IMPORTED_MODULE_5__.of)(result200);
               }));
@@ -8126,7 +8341,7 @@
         }, {
           key: "update",
           value: function update(id, command) {
-            var _this30 = this;
+            var _this32 = this;
 
             var url_ = this.baseUrl + "/api/TodoItems/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -8143,11 +8358,11 @@
               })
             };
             return this.http.request("put", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this30.processUpdate(response_);
+              return _this32.processUpdate(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this30.processUpdate(response_);
+                  return _this32.processUpdate(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8198,7 +8413,7 @@
         }, {
           key: "delete",
           value: function _delete(id) {
-            var _this31 = this;
+            var _this33 = this;
 
             var url_ = this.baseUrl + "/api/TodoItems/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -8212,11 +8427,11 @@
               })
             };
             return this.http.request("delete", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this31.processDelete(response_);
+              return _this33.processDelete(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this31.processDelete(response_);
+                  return _this33.processDelete(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8267,7 +8482,7 @@
         }, {
           key: "updateItemDetails",
           value: function updateItemDetails(id, command) {
-            var _this32 = this;
+            var _this34 = this;
 
             var url_ = this.baseUrl + "/api/TodoItems/UpdateItemDetails?";
             if (id === null) throw new Error("The parameter 'id' cannot be null.");else if (id !== undefined) url_ += "id=" + encodeURIComponent("" + id) + "&";
@@ -8283,11 +8498,11 @@
               })
             };
             return this.http.request("put", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this32.processUpdateItemDetails(response_);
+              return _this34.processUpdateItemDetails(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this32.processUpdateItemDetails(response_);
+                  return _this34.processUpdateItemDetails(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8362,7 +8577,7 @@
         _createClass(_TodoListsClient, [{
           key: "get",
           value: function get() {
-            var _this33 = this;
+            var _this35 = this;
 
             var url_ = this.baseUrl + "/api/TodoLists";
             url_ = url_.replace(/[?&]$/, "");
@@ -8374,11 +8589,11 @@
               })
             };
             return this.http.request("get", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this33.processGet(response_);
+              return _this35.processGet(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this33.processGet(response_);
+                  return _this35.processGet(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8388,7 +8603,7 @@
         }, {
           key: "processGet",
           value: function processGet(response) {
-            var _this34 = this;
+            var _this36 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -8413,7 +8628,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this34.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this36.jsonParseReviver);
                 result200 = _TodosVm.fromJS(resultData200);
                 return (0, rxjs__WEBPACK_IMPORTED_MODULE_5__.of)(result200);
               }));
@@ -8428,7 +8643,7 @@
         }, {
           key: "create",
           value: function create(command) {
-            var _this35 = this;
+            var _this37 = this;
 
             var url_ = this.baseUrl + "/api/TodoLists";
             url_ = url_.replace(/[?&]$/, "");
@@ -8443,11 +8658,11 @@
               })
             };
             return this.http.request("post", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this35.processCreate(response_);
+              return _this37.processCreate(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this35.processCreate(response_);
+                  return _this37.processCreate(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8457,7 +8672,7 @@
         }, {
           key: "processCreate",
           value: function processCreate(response) {
-            var _this36 = this;
+            var _this38 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -8482,7 +8697,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this36.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this38.jsonParseReviver);
                 result200 = resultData200 !== undefined ? resultData200 : null;
                 return (0, rxjs__WEBPACK_IMPORTED_MODULE_5__.of)(result200);
               }));
@@ -8497,7 +8712,7 @@
         }, {
           key: "get2",
           value: function get2(id) {
-            var _this37 = this;
+            var _this39 = this;
 
             var url_ = this.baseUrl + "/api/TodoLists/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -8511,11 +8726,11 @@
               })
             };
             return this.http.request("get", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this37.processGet2(response_);
+              return _this39.processGet2(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this37.processGet2(response_);
+                  return _this39.processGet2(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8566,7 +8781,7 @@
         }, {
           key: "update",
           value: function update(id, command) {
-            var _this38 = this;
+            var _this40 = this;
 
             var url_ = this.baseUrl + "/api/TodoLists/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -8583,11 +8798,11 @@
               })
             };
             return this.http.request("put", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this38.processUpdate(response_);
+              return _this40.processUpdate(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this38.processUpdate(response_);
+                  return _this40.processUpdate(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8638,7 +8853,7 @@
         }, {
           key: "delete",
           value: function _delete(id) {
-            var _this39 = this;
+            var _this41 = this;
 
             var url_ = this.baseUrl + "/api/TodoLists/{id}";
             if (id === undefined || id === null) throw new Error("The parameter 'id' must be defined.");
@@ -8652,11 +8867,11 @@
               })
             };
             return this.http.request("delete", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this39.processDelete(response_);
+              return _this41.processDelete(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this39.processDelete(response_);
+                  return _this41.processDelete(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8731,7 +8946,7 @@
         _createClass(_WeatherForecastClient, [{
           key: "get",
           value: function get() {
-            var _this40 = this;
+            var _this42 = this;
 
             var url_ = this.baseUrl + "/api/WeatherForecast";
             url_ = url_.replace(/[?&]$/, "");
@@ -8743,11 +8958,11 @@
               })
             };
             return this.http.request("get", url_, options_).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (response_) {
-              return _this40.processGet(response_);
+              return _this42.processGet(response_);
             })).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.catchError)(function (response_) {
               if (response_ instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponseBase) {
                 try {
-                  return _this40.processGet(response_);
+                  return _this42.processGet(response_);
                 } catch (e) {
                   return (0, rxjs__WEBPACK_IMPORTED_MODULE_4__.throwError)(e);
                 }
@@ -8757,7 +8972,7 @@
         }, {
           key: "processGet",
           value: function processGet(response) {
-            var _this41 = this;
+            var _this43 = this;
 
             var status = response.status;
             var responseBlob = response instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse ? response.body : response.error instanceof Blob ? response.error : undefined;
@@ -8782,7 +8997,7 @@
             if (status === 200) {
               return blobToText(responseBlob).pipe((0, rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.mergeMap)(function (_responseText) {
                 var result200 = null;
-                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this41.jsonParseReviver);
+                var resultData200 = _responseText === "" ? null : JSON.parse(_responseText, _this43.jsonParseReviver);
 
                 if (Array.isArray(resultData200)) {
                   result200 = [];
@@ -9448,18 +9663,18 @@
         var _super = _createSuper(_SwaggerException);
 
         function _SwaggerException(message, status, response, headers, result) {
-          var _this42;
+          var _this44;
 
           _classCallCheck(this, _SwaggerException);
 
-          _this42 = _super.call(this);
-          _this42.isSwaggerException = true;
-          _this42.message = message;
-          _this42.status = status;
-          _this42.response = response;
-          _this42.headers = headers;
-          _this42.result = result;
-          return _this42;
+          _this44 = _super.call(this);
+          _this44.isSwaggerException = true;
+          _this44.message = message;
+          _this44.status = status;
+          _this44.response = response;
+          _this44.headers = headers;
+          _this44.result = result;
+          return _this44;
         }
 
         _createClass(_SwaggerException, null, [{

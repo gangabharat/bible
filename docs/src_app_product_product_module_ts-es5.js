@@ -1713,7 +1713,7 @@
       /* harmony import */
 
 
-      var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! rxjs */
       9165);
       /* harmony import */
@@ -1725,7 +1725,7 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/core */
       7716);
       /* harmony import */
@@ -1743,19 +1743,13 @@
       /* harmony import */
 
 
-      var _ngrx_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _ngrx_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @ngrx/store */
       6710);
       /* harmony import */
 
 
-      var _product_add_product_add_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./product-add/product-add.component */
-      3960);
-      /* harmony import */
-
-
-      var _product_list_product_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _product_list_product_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ./product-list/product-list.component */
       147);
 
@@ -1769,7 +1763,7 @@
           this.productService = productService;
           this.bsModalService = bsModalService;
           this.store = store;
-          this.products$ = new rxjs__WEBPACK_IMPORTED_MODULE_5__.Observable();
+          this.products$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__.Observable();
           this.displayStyle = "none";
         }
 
@@ -1828,64 +1822,60 @@
       }();
 
       _ProductComponent.ɵfac = function ProductComponent_Factory(t) {
-        return new (t || _ProductComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_product_service__WEBPACK_IMPORTED_MODULE_1__.ProductService), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__.BsModalService), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_7__.Store));
+        return new (t || _ProductComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](_product_service__WEBPACK_IMPORTED_MODULE_1__.ProductService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__.BsModalService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__.Store));
       };
 
-      _ProductComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({
+      _ProductComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({
         type: _ProductComponent,
         selectors: [["app-product"]],
         viewQuery: function ProductComponent_Query(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵviewQuery"](_c0, 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵviewQuery"](_c0, 5);
           }
 
           if (rf & 2) {
             var _t;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵloadQuery"]()) && (ctx.template = _t.first);
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵloadQuery"]()) && (ctx.template = _t.first);
           }
         },
-        decls: 10,
+        decls: 9,
         vars: 0,
         consts: [[1, "text-primary", "text-center"], [1, "btn", "btn-primary", 3, "click"], [1, ""]],
         template: function ProductComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "h1");
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](1, "h1");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](2, "Product Details");
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](2, "Product Details");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](3, "button", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](3, "button", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵlistener"]("click", function ProductComponent_Template_button_click_3_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵlistener"]("click", function ProductComponent_Template_button_click_3_listener() {
               return ctx.onAdd();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵtext"](4, "Add New");
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](4, "Add New");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](5, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](5, "div", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](6, "app-product-add");
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](6, "br");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](7, "div");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](7, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](8, "app-product-list");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](8, "div");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](9, "app-product-list");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
           }
         },
-        directives: [_product_add_product_add_component__WEBPACK_IMPORTED_MODULE_3__.ProductAddComponent, _product_list_product_list_component__WEBPACK_IMPORTED_MODULE_4__.ProductListComponent],
+        directives: [_product_list_product_list_component__WEBPACK_IMPORTED_MODULE_3__.ProductListComponent],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwcm9kdWN0LmNvbXBvbmVudC5jc3MifQ== */"]
       });
       /***/
