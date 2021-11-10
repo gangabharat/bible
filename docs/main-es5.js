@@ -2443,7 +2443,13 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @fortawesome/free-solid-svg-icons */
+      9976);
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/core */
       7716);
       /* harmony import */
@@ -2452,12 +2458,19 @@
       var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! ngx-bootstrap/modal */
       3301);
+      /* harmony import */
+
+
+      var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @fortawesome/angular-fontawesome */
+      4163);
 
       var _BibleVerseDetailComponent = /*#__PURE__*/function () {
         function _BibleVerseDetailComponent(bsModalService) {
           _classCallCheck(this, _BibleVerseDetailComponent);
 
           this.bsModalService = bsModalService;
+          this.faShare = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__.faShare;
         }
 
         _createClass(_BibleVerseDetailComponent, [{
@@ -2474,76 +2487,111 @@
       }();
 
       _BibleVerseDetailComponent.ɵfac = function BibleVerseDetailComponent_Factory(t) {
-        return new (t || _BibleVerseDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__.BsModalService));
+        return new (t || _BibleVerseDetailComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__.BsModalService));
       };
 
-      _BibleVerseDetailComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      _BibleVerseDetailComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
         type: _BibleVerseDetailComponent,
         selectors: [["app-bible-verse-detail"]],
-        decls: 12,
-        vars: 7,
-        consts: [[1, "modal-header", "clearfix"], [1, "modal-title", "float-left"], ["type", "button", "aria-label", "Close", 1, "close", "float-right", 3, "click"], ["aria-hidden", "true"], [1, "card-body"], [1, "card-text"], [1, "card-title"]],
+        decls: 19,
+        vars: 13,
+        consts: [[1, "modal-header", "clearfix"], [1, "modal-title", "float-left"], [1, "badge", "badge-pill", "badge-success", "font-italic"], ["type", "button", "aria-label", "Close", 1, "close", "float-right", 3, "click"], ["aria-hidden", "true"], [1, "card-body"], [1, "alert", "alert-success", "fade", "show"], ["target", "_blank", 3, "href"], [3, "icon"], [1, "card-text"], [1, "card-title"]],
         template: function BibleVerseDetailComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h4", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "h4", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "button", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "span", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function BibleVerseDetailComponent_Template_button_click_3_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "button", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function BibleVerseDetailComponent_Template_button_click_5_listener() {
               return ctx.onClose();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "span", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "span", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "\xD7");
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, "\xD7");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "div", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "div", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "h2");
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "strong");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](11, "Share Whatsapp !");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "a", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "h1", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](13, "fa-icon", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "div", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "h2");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "h1", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](18);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate3"]("", ctx.book, " ", ctx.chapter, " : ", ctx.verseNumber, "");
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate3"](" ", ctx.bibleBookIndex.book, " ", ctx.chapter, " : ", ctx.verseNumber, " ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx.verse.Verse);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx.bibleBookIndex.abbr);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate3"]("", ctx.book, " ", ctx.chapter, " : ", ctx.verseNumber, "");
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate4"]("href", "https://api.whatsapp.com/send?text=", ctx.verse.Verse, " - ", ctx.bibleBookIndex.book, " ", ctx.chapter, " : ", ctx.verseNumber, "", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("icon", ctx.faShare);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx.verse.Verse);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate3"](" ", ctx.bibleBookIndex.abbr, " ", ctx.chapter, " : ", ctx.verseNumber, " ");
           }
         },
+        directives: [_fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FaIconComponent],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiaWJsZS12ZXJzZS1kZXRhaWwuY29tcG9uZW50LmNzcyJ9 */"]
       });
       /***/
@@ -2724,7 +2772,7 @@
 
             var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"](2);
 
-            return ctx_r14.onVerse(ctx_r14.books[ctx_r14.book], ctx_r14.chapter, i_r13 + 1, verse_r12);
+            return ctx_r14.onVerse(ctx_r14.bibleBookIndex[ctx_r14.book], ctx_r14.chapter, i_r13 + 1, verse_r12);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](1, "b");
@@ -2792,7 +2840,6 @@
           this.selectedbibleBook = "0";
           this.selectedbibleChapter = "1";
           this.selectedbibleLanguage = "-1";
-          this.books = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalm", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"];
           this.pushNotificationsService.requestPermission();
         }
 
@@ -2913,10 +2960,10 @@
           }
         }, {
           key: "onVerse",
-          value: function onVerse(book, chapter, verseNumber, verse) {
+          value: function onVerse(bibleBookIndex, chapter, verseNumber, verse) {
             this.bsModalService.show(_bible_verse_detail_bible_verse_detail_component__WEBPACK_IMPORTED_MODULE_0__.BibleVerseDetailComponent, {
               initialState: {
-                book: book,
+                bibleBookIndex: bibleBookIndex,
                 chapter: chapter,
                 verseNumber: verseNumber,
                 verse: verse

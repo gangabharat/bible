@@ -594,6 +594,12 @@
       /* harmony import */
 
 
+      var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @fortawesome/angular-fontawesome */
+      4163);
+      /* harmony import */
+
+
       var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/core */
       7716);
@@ -610,13 +616,13 @@
         type: _BibleModule
       });
       _BibleModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({
-        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule]]
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_9__.FontAwesomeModule]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](_BibleModule, {
           declarations: [_bible_component__WEBPACK_IMPORTED_MODULE_1__.BibleComponent, _bible_book_bible_book_component__WEBPACK_IMPORTED_MODULE_2__.BibleBookComponent, _bible_book_chapter_bible_book_chapter_component__WEBPACK_IMPORTED_MODULE_3__.BibleBookChapterComponent, _bible_recent_history_bible_recent_history_component__WEBPACK_IMPORTED_MODULE_4__.BibleRecentHistoryComponent, _bible_verse_detail_bible_verse_detail_component__WEBPACK_IMPORTED_MODULE_5__.BibleVerseDetailComponent],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_9__.FontAwesomeModule]
         });
       })();
       /***/

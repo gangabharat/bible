@@ -315,7 +315,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bible_book_chapter_bible_book_chapter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bible-book-chapter/bible-book-chapter.component */ 3068);
 /* harmony import */ var _bible_recent_history_bible_recent_history_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bible-recent-history/bible-recent-history.component */ 2701);
 /* harmony import */ var _bible_verse_detail_bible_verse_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./bible-verse-detail/bible-verse-detail.component */ 3124);
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ 4163);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 7716);
+
 
 
 
@@ -329,12 +331,12 @@ class BibleModule {
 }
 BibleModule.ɵfac = function BibleModule_Factory(t) { return new (t || BibleModule)(); };
 BibleModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({ type: BibleModule });
-BibleModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule]] });
+BibleModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({ imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_9__.FontAwesomeModule]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵsetNgModuleScope"](BibleModule, { declarations: [_bible_component__WEBPACK_IMPORTED_MODULE_1__.BibleComponent,
         _bible_book_bible_book_component__WEBPACK_IMPORTED_MODULE_2__.BibleBookComponent,
         _bible_book_chapter_bible_book_chapter_component__WEBPACK_IMPORTED_MODULE_3__.BibleBookChapterComponent,
         _bible_recent_history_bible_recent_history_component__WEBPACK_IMPORTED_MODULE_4__.BibleRecentHistoryComponent,
-        _bible_verse_detail_bible_verse_detail_component__WEBPACK_IMPORTED_MODULE_5__.BibleVerseDetailComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule] }); })();
+        _bible_verse_detail_bible_verse_detail_component__WEBPACK_IMPORTED_MODULE_5__.BibleVerseDetailComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_7__.CommonModule, _angular_forms__WEBPACK_IMPORTED_MODULE_8__.FormsModule, _bible_routing_module__WEBPACK_IMPORTED_MODULE_0__.BibleRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_9__.FontAwesomeModule] }); })();
 
 
 /***/ }),
