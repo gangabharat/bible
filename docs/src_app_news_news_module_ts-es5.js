@@ -116,18 +116,98 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       7716);
+      /* harmony import */
+
+
+      var _shared_directive_scroll_tracker_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ../../shared/directive/scroll-tracker.directive */
+      3310);
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common */
+      8583);
+
+      function NewsListComponent_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "img", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "h5", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "p", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "p", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "small", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Last updated 3 mins ago");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var news_r1 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("src", news_r1.LogoPath, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](news_r1.Title);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("innerHtml", news_r1.Description, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
+        }
+      }
 
       var _NewsListComponent = /*#__PURE__*/function () {
         function _NewsListComponent() {
           _classCallCheck(this, _NewsListComponent);
+
+          this.scrollingFinished = new _angular_core__WEBPACK_IMPORTED_MODULE_1__.EventEmitter();
+          this.newsList = [];
         }
 
         _createClass(_NewsListComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {}
+        }, {
+          key: "onScrollingFinished",
+          value: function onScrollingFinished() {
+            this.scrollingFinished.emit();
+          }
         }]);
 
         return _NewsListComponent;
@@ -137,20 +217,38 @@
         return new (t || _NewsListComponent)();
       };
 
-      _NewsListComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      _NewsListComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: _NewsListComponent,
         selectors: [["app-news-list"]],
+        inputs: {
+          newsList: "newsList"
+        },
+        outputs: {
+          scrollingFinished: "scrollingFinished"
+        },
         decls: 2,
-        vars: 0,
+        vars: 1,
+        consts: [["scrollTracker", "", 1, "row", 3, "scrollingFinished"], ["class", "card-shadow card mb-1", 4, "ngFor", "ngForOf"], [1, "card-shadow", "card", "mb-1"], [1, "row", "g-0"], [1, "col-md-4"], ["alt", "not found", 1, "img-fluid", "rounded-start", 3, "src"], [1, "col-md-8"], [1, "card-body"], [1, "card-title"], [1, "card-text", 3, "innerHtml"], [1, "card-text"], [1, "text-muted"]],
         template: function NewsListComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "news-list works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("scrollingFinished", function NewsListComponent_Template_div_scrollingFinished_0_listener() {
+              return ctx.onScrollingFinished();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, NewsListComponent_div_1_Template, 12, 3, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.newsList);
           }
         },
+        directives: [_shared_directive_scroll_tracker_directive__WEBPACK_IMPORTED_MODULE_0__.ScrollTrackerDirective, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgForOf],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJuZXdzLWxpc3QuY29tcG9uZW50LmNzcyJ9 */"]
       });
       /***/
@@ -192,7 +290,7 @@
 
       var _news_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! ./news.component */
-      9096);
+      6496);
       /* harmony import */
 
 
@@ -427,7 +525,7 @@
     },
 
     /***/
-    9096:
+    6496:
     /*!****************************************!*\
       !*** ./src/app/news/news.component.ts ***!
       \****************************************/
@@ -454,7 +552,13 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs */
+      9165);
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/core */
       7716);
       /* harmony import */
@@ -472,9 +576,15 @@
       /* harmony import */
 
 
-      var _news_widget_news_widget_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./news-widget/news-widget.component */
-      2404);
+      var _news_list_news_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./news-list/news-list.component */
+      1600);
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/common */
+      8583);
 
       var _NewsComponent = /*#__PURE__*/function () {
         function _NewsComponent(newsHttpService, newsService) {
@@ -483,6 +593,7 @@
           this.newsHttpService = newsHttpService;
           this.newsService = newsService;
           this.newsData = [];
+          this.news$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__.Observable();
         }
 
         _createClass(_NewsComponent, [{
@@ -492,14 +603,19 @@
 
             this.newsHttpService.getNews().subscribe(function (res) {
               _this2.newsService.load(res);
+
+              _this2.loadMore();
             });
-            this.newsService.puppies$.subscribe(function (res) {
-              console.log(res);
-            });
+            this.news$ = this.newsService.puppies$;
           }
         }, {
           key: "loadMore",
           value: function loadMore() {
+            this.newsService.loadMore();
+          }
+        }, {
+          key: "onScrollingFinished",
+          value: function onScrollingFinished() {
             this.newsService.loadMore();
           }
         }]);
@@ -508,31 +624,34 @@
       }();
 
       _NewsComponent.ɵfac = function NewsComponent_Factory(t) {
-        return new (t || _NewsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_news_http_service__WEBPACK_IMPORTED_MODULE_0__.NewsHttpService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_news_service__WEBPACK_IMPORTED_MODULE_1__.NewsService));
+        return new (t || _NewsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_news_http_service__WEBPACK_IMPORTED_MODULE_0__.NewsHttpService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_news_service__WEBPACK_IMPORTED_MODULE_1__.NewsService));
       };
 
-      _NewsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+      _NewsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({
         type: _NewsComponent,
         selectors: [["app-news"]],
-        decls: 3,
-        vars: 0,
-        consts: [[1, "btn", "btn-primary", 3, "click"]],
+        decls: 2,
+        vars: 3,
+        consts: [[3, "newsList", "scrollingFinished"]],
         template: function NewsComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-news-widget");
+            _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "app-news-list", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "button", 0);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function NewsComponent_Template_button_click_1_listener() {
-              return ctx.loadMore();
+            _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("scrollingFinished", function NewsComponent_Template_app_news_list_scrollingFinished_0_listener() {
+              return ctx.onScrollingFinished();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Load More...");
+            _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipe"](1, "async");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("newsList", _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵpipeBind1"](1, 1, ctx.news$));
           }
         },
-        directives: [_news_widget_news_widget_component__WEBPACK_IMPORTED_MODULE_2__.NewsWidgetComponent],
+        directives: [_news_list_news_list_component__WEBPACK_IMPORTED_MODULE_2__.NewsListComponent],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.AsyncPipe],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJuZXdzLmNvbXBvbmVudC5jc3MifQ== */"]
       });
       /***/
@@ -566,7 +685,7 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
       8583);
       /* harmony import */
@@ -580,7 +699,7 @@
 
       var _news_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! ./news.component */
-      9096);
+      6496);
       /* harmony import */
 
 
@@ -596,13 +715,19 @@
       /* harmony import */
 
 
-      var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @fortawesome/angular-fontawesome */
       4163);
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _shared_directive_scroll_tracker_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../shared/directive/scroll-tracker.directive */
+      3310);
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/core */
       7716);
 
@@ -614,17 +739,17 @@
         return new (t || _NewsModule)();
       };
 
-      _NewsModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({
+      _NewsModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({
         type: _NewsModule
       });
-      _NewsModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
-        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_5__.CommonModule, _news_routing_module__WEBPACK_IMPORTED_MODULE_0__.NewsRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__.FontAwesomeModule]]
+      _NewsModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule, _news_routing_module__WEBPACK_IMPORTED_MODULE_0__.NewsRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__.FontAwesomeModule]]
       });
 
       (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](_NewsModule, {
-          declarations: [_news_component__WEBPACK_IMPORTED_MODULE_1__.NewsComponent, _news_list_news_list_component__WEBPACK_IMPORTED_MODULE_2__.NewsListComponent, _news_widget_news_widget_component__WEBPACK_IMPORTED_MODULE_3__.NewsWidgetComponent],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.CommonModule, _news_routing_module__WEBPACK_IMPORTED_MODULE_0__.NewsRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__.FontAwesomeModule]
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](_NewsModule, {
+          declarations: [_news_component__WEBPACK_IMPORTED_MODULE_1__.NewsComponent, _news_list_news_list_component__WEBPACK_IMPORTED_MODULE_2__.NewsListComponent, _news_widget_news_widget_component__WEBPACK_IMPORTED_MODULE_3__.NewsWidgetComponent, _shared_directive_scroll_tracker_directive__WEBPACK_IMPORTED_MODULE_4__.ScrollTrackerDirective],
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule, _news_routing_module__WEBPACK_IMPORTED_MODULE_0__.NewsRoutingModule, _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__.FontAwesomeModule]
         });
       })();
       /***/
@@ -760,6 +885,82 @@
         token: _NewsService,
         factory: _NewsService.ɵfac,
         providedIn: "root"
+      });
+      /***/
+    },
+
+    /***/
+    3310:
+    /*!**************************************************************!*\
+      !*** ./src/app/shared/directive/scroll-tracker.directive.ts ***!
+      \**************************************************************/
+
+    /***/
+    function _(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export */
+
+
+      __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */
+        "ScrollTrackerDirective": function ScrollTrackerDirective() {
+          return (
+            /* binding */
+            _ScrollTrackerDirective
+          );
+        }
+        /* harmony export */
+
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      7716);
+
+      var _ScrollTrackerDirective = /*#__PURE__*/function () {
+        function _ScrollTrackerDirective() {
+          _classCallCheck(this, _ScrollTrackerDirective);
+
+          this.scrollingFinished = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+          this.emitted = false;
+        }
+
+        _createClass(_ScrollTrackerDirective, [{
+          key: "onScroll",
+          value: function onScroll() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight && !this.emitted) {
+              this.emitted = true;
+              this.scrollingFinished.emit();
+            } else if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
+              this.emitted = false;
+            }
+          }
+        }]);
+
+        return _ScrollTrackerDirective;
+      }();
+
+      _ScrollTrackerDirective.ɵfac = function ScrollTrackerDirective_Factory(t) {
+        return new (t || _ScrollTrackerDirective)();
+      };
+
+      _ScrollTrackerDirective.ɵdir = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
+        type: _ScrollTrackerDirective,
+        selectors: [["", "scrollTracker", ""]],
+        hostBindings: function ScrollTrackerDirective_HostBindings(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("scroll", function ScrollTrackerDirective_scroll_HostBindingHandler() {
+              return ctx.onScroll();
+            }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"]);
+          }
+        },
+        outputs: {
+          scrollingFinished: "scrollingFinished"
+        }
       });
       /***/
     }

@@ -326,6 +326,71 @@
     },
 
     /***/
+    9096:
+    /*!************************************************************************!*\
+      !*** ./src/app/bible/bible-read-iframe/bible-read-iframe.component.ts ***!
+      \************************************************************************/
+
+    /***/
+    function _(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export */
+
+
+      __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */
+        "BibleReadIframeComponent": function BibleReadIframeComponent() {
+          return (
+            /* binding */
+            _BibleReadIframeComponent
+          );
+        }
+        /* harmony export */
+
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      7716);
+
+      var _BibleReadIframeComponent = /*#__PURE__*/function () {
+        function _BibleReadIframeComponent() {
+          _classCallCheck(this, _BibleReadIframeComponent);
+        }
+
+        _createClass(_BibleReadIframeComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return _BibleReadIframeComponent;
+      }();
+
+      _BibleReadIframeComponent.ɵfac = function BibleReadIframeComponent_Factory(t) {
+        return new (t || _BibleReadIframeComponent)();
+      };
+
+      _BibleReadIframeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: _BibleReadIframeComponent,
+        selectors: [["app-bible-read-iframe"]],
+        decls: 1,
+        vars: 0,
+        consts: [["src", "https://live.bible.is/bible/telwtc/GEN/1", "frameborder", "0", "id", "fileframe", 2, "width", "94%", "height", "87%", "position", "absolute"]],
+        template: function BibleReadIframeComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "iframe", 0);
+          }
+        },
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiaWJsZS1yZWFkLWlmcmFtZS5jb21wb25lbnQuY3NzIn0= */"]
+      });
+      /***/
+    },
+
+    /***/
     2701:
     /*!******************************************************************************!*\
       !*** ./src/app/bible/bible-recent-history/bible-recent-history.component.ts ***!
@@ -453,7 +518,7 @@
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/router */
       9895);
       /* harmony import */
@@ -471,19 +536,28 @@
       /* harmony import */
 
 
-      var _bible_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _bible_read_iframe_bible_read_iframe_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./bible-read-iframe/bible-read-iframe.component */
+      9096);
+      /* harmony import */
+
+
+      var _bible_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ./bible.component */
       2005);
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/core */
       7716);
 
       var routes = [{
         path: '',
-        component: _bible_component__WEBPACK_IMPORTED_MODULE_2__.BibleComponent
+        component: _bible_component__WEBPACK_IMPORTED_MODULE_3__.BibleComponent
+      }, {
+        path: 'audio',
+        component: _bible_read_iframe_bible_read_iframe_component__WEBPACK_IMPORTED_MODULE_2__.BibleReadIframeComponent
       }, //{ path: ':id', component: BibleComponent }
       {
         path: ':book',
@@ -501,17 +575,17 @@
         return new (t || _BibleRoutingModule)();
       };
 
-      _BibleRoutingModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({
+      _BibleRoutingModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({
         type: _BibleRoutingModule
       });
-      _BibleRoutingModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({
-        imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule]
+      _BibleRoutingModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
+        imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule.forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule]
       });
 
       (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](_BibleRoutingModule, {
-          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule],
-          exports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule]
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](_BibleRoutingModule, {
+          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule],
+          exports: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule]
         });
       })();
       /***/
