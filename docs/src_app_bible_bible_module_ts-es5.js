@@ -377,12 +377,22 @@
       _BibleReadIframeComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: _BibleReadIframeComponent,
         selectors: [["app-bible-read-iframe"]],
-        decls: 1,
+        decls: 4,
         vars: 0,
-        consts: [["src", "https://live.bible.is/bible/telwtc/GEN/1", "frameborder", "0", "id", "fileframe", 2, "width", "94%", "height", "87%", "position", "absolute"]],
+        consts: [[1, "embed-responsive", "embed-responsive-16by9", "card-shadow", "mb-3"], ["src", "https://download-a.akamaihd.net/files/media_publication/29/pk_TU_038_r720P.mp4", "crossorigin", "anonymous", "controls", "", 1, "embed-responsive-item"], [1, "embed-responsive", "embed-responsive-16by9", "card-shadow"], ["title", "Sample Video", "src", "https://download-a.akamaihd.net/files/media_publication/9c/pk_TU_034_r720P.mp4", "crossorigin", "anonymous", "controls", "", 1, "embed-responsive-item"]],
         template: function BibleReadIframeComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "iframe", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "video", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "video", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
           }
         },
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiaWJsZS1yZWFkLWlmcmFtZS5jb21wb25lbnQuY3NzIn0= */"]
@@ -556,7 +566,7 @@
         path: '',
         component: _bible_component__WEBPACK_IMPORTED_MODULE_3__.BibleComponent
       }, {
-        path: 'audio',
+        path: 'video',
         component: _bible_read_iframe_bible_read_iframe_component__WEBPACK_IMPORTED_MODULE_2__.BibleReadIframeComponent
       }, //{ path: ':id', component: BibleComponent }
       {
